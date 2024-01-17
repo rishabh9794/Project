@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Design</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 10px; 
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .or-divider {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .disclaimer {
+            font-size: 12px;
+            text-align: center;
+            color: black;
+            margin-top: 10px; 
+        }
+
+        .disclaimer a {
+            color: blue;
+            text-decoration: underline;
+        }
+
+    
+        .logo-img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px; 
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+     
+        <img class="logo-img" src=""C:\Users\hp\Pictures\Screenshots\Screenshot 2024-01-17 124250.png"" alt="iECHO Logo"> 
+        <h1>Welcome to iECHO</h1>
+        <p>Please choose an option to Continue.</p>
+        <button onclick="sortAndAlert()">Continue with Email</button>
+        <button onclick="showMobileAlert()">Continue with Mobile</button>
+        <div class="or-divider">OR</div>
+        <button disabled>Continue with Google</button>
+        <p class="disclaimer">By continuing, you accept the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+        <p class="disclaimer">Disclaimer: This is an alpha test version of the ECHO webi is provided on an "as is" and "as available" basis. ECHO Ins ECHO India do not give any warranties, whether express on suitability or usability of the website.</p>
+    </div>
+
+    <script>
+        
+        const users = [
+            { name: 'John Doe', age: 25 },
+            { name: 'Alexander', age: 17 },
+            { name: 'Nelson Mandela', age: 78 },
+            { name: 'Mahatma Gandhi', age: 56 },
+            { name: 'Nikol Tesla', age: 39 }
+        ];
+
+        function sortAndAlert() {
+            
+            users.sort((a, b) => a.age - b.age);
+
+            const sortedNames = users.map(user => user.name);
+
+          
+            window.alert('Sorted Names: ' + sortedNames.join(', '));
+        }
+
+        function showMobileAlert() {
+            const yourName = 'Your Name'; /
+            window.alert('Thank you for choosing mobile, ' + yourName);
+        }
+    </script>
+</body>
+</html>
